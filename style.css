@@ -1,0 +1,109 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+table, th, td { 
+    border: 1px solid black; 
+    border-collapse: collapse; 
+}
+
+table {
+    margin: 20px;
+    margin-bottom: 100px;
+}
+
+table thead { 
+    background-color: rgb(199, 199, 199);
+    position: sticky;
+    top: -2px;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+
+td {
+    min-width: 50px;
+    padding: 5px;
+    text-align: center;
+}
+
+tr {
+    height: 70px;
+}
+
+.heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    height: 100px;
+    width: 100%;
+}
+
+.heading input {
+    width: 90%;
+    position: absolute;
+    bottom: 0;
+    border: 0;
+    border-radius: 0;
+    overflow: hidden;
+    text-align: center;
+}
+
+
+#pageForm {
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    bottom: 0;
+    /* border-top: 1px solid black; */
+    background-color: white;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#pageForm div {
+    width: 400px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#pageForm div button {
+    height: 60%;
+    width: 40%;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: rgb(177, 177, 177);
+    border: 0;
+    border-radius: 5%;
+    transition: 50ms;
+    cursor: pointer;
+}
+
+#pageForm div button:disabled {
+    background-color: rgb(155, 155, 155);
+}
+#pageForm div button:disabled:hover {
+    background-color: rgb(155, 155, 155);
+}
+
+#pageForm div button:hover {
+    background-color: rgb(167, 167, 167);
+}
+
+#pageForm div button:focus {
+    background-color: rgb(145, 145, 145);
+}
+
+#pageForm span {
+    width: 50px;
+    font-size: x-large;
+    text-align: center;
+}
