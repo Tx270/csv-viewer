@@ -74,7 +74,7 @@ tr {
     justify-content: center;
 }
 
-#pageForm div button {
+#pageForm div button, #pageForm div select {
     height: 60%;
     width: 40%;
     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
@@ -87,8 +87,14 @@ tr {
     cursor: pointer;
 }
 
+#pageForm div select {
+    width: 80%;
+    text-align: center;
+}
+
 #pageForm div button:disabled {
     background-color: rgb(155, 155, 155);
+    cursor: default;
 }
 #pageForm div button:disabled:hover {
     background-color: rgb(155, 155, 155);
@@ -98,7 +104,7 @@ tr {
     background-color: rgb(167, 167, 167);
 }
 
-#pageForm div button:focus {
+#pageForm div button:active {
     background-color: rgb(145, 145, 145);
 }
 

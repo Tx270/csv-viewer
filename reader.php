@@ -10,6 +10,7 @@ class Reader {
   function __construct($filename, $perpage = 100) {
     $this->filename = $filename;
     $this->file = fopen($this->filename, 'r');
+    if (!$this->file) throw new Exception("File not found", 1);
     $this->perpage = $perpage;
     $this->header = fgetcsv($this->file);
   }

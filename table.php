@@ -2,12 +2,17 @@
 
 require "reader.php";
 
-$f = new Reader('customers-1000.csv', 100); //Wykaz_szkół_i_placówek_wg_stanu_na_30.IX._2018_w.5.csv
+try {
+    $f = new Reader("csv/$file", 100);
+} catch (Exception $exception) {
+    echo "<script> alert('Can\'t open file given'); </script>";
+    return;
+}
 
 $page = $_GET['page'] ?? 1;
 if ($page <= 0) $page = 1;
 
-echo "<script> const page = $page; </script>";
+echo "<script> const pageNumber = $page; const fileName = '$file'; </script>";
 
 echo "<thead>";
 foreach ($f->getHeader() as $key => $td) {

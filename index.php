@@ -9,7 +9,12 @@
 <body>
   <form action="index.php" method="get" autocomplete="off">
     <div id="pageForm">
-      <div></div>
+      <div>
+        <input type="hidden" name="file" id="file">
+        <select onchange="changeFile(this.value);">
+          <?php require "files.php"; ?>
+        </select>
+      </div>
       <div>
         <input type="hidden" name="page" id="page">
         <button onclick="submitForm(-1)" id="buttonPrevious" style="font-weight: 900;"> << </button>
